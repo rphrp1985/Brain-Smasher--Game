@@ -1,4 +1,4 @@
-//package com.prianshuprasad.brainsmasher
+
 
 import android.R
 import android.animation.Animator
@@ -25,13 +25,9 @@ class Adapter(private val listener: playground,context: Context, BoxArray: Mutab
     ArrayAdapter<Box?>(listener, 0, BoxArray!! as List<Box?>) {
 
     var Isinitial=0;
-   val gm = gameMachine()
-
-
-
-
-val ViewList:MutableList<View?> = ArrayList()
-var AIIndex=-1;
+    val gm = gameMachine()
+    val ViewList:MutableList<View?> = ArrayList()
+    var AIIndex=-1;
     var userIndex=-1;
     var isClicked=-1;
 
@@ -42,20 +38,17 @@ var AIIndex=-1;
     }
 
 
-fun AI()
-{
-    AIIndex=gm.chooseCardAI()
+    // selects a random Card
+    fun AI()
+    {
+        AIIndex=gm.chooseCardAI()
 
-
-
-    if(AIIndex!=-1)
-    update()
-    else
+        if(AIIndex!=-1)
+        update()
+        else
         listener.gameOver()
 
-
-
-}
+    }
 
 
 
@@ -65,9 +58,6 @@ fun AI()
 
         if(Isinitial>17)
         {
-//            listener.Toast("$userIndex")
-
-
             if(userIndex>=0)
             {
 
@@ -80,10 +70,6 @@ fun AI()
 
         Isinitial++;
 
-
-
-
-
         var listitemView = convertView
         if (listitemView == null) {
             // Layout Inflater inflates each item to be displayed in GridView.
@@ -91,7 +77,7 @@ fun AI()
         }
         val box: Box? = gm.getList()[(position)]
 
-val image= listitemView!!.findViewById<ImageView>(com.prianshuprasad.brainsmasher.R.id.card)
+        val image= listitemView!!.findViewById<ImageView>(com.prianshuprasad.brainsmasher.R.id.card)
 
         when (box!!.label){
             0-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.empty)
@@ -101,7 +87,7 @@ val image= listitemView!!.findViewById<ImageView>(com.prianshuprasad.brainsmashe
             4-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.d)
             5-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.e)
             6-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.g)
-//            7-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.)
+
 
         }
 
@@ -163,7 +149,7 @@ val image= listitemView!!.findViewById<ImageView>(com.prianshuprasad.brainsmashe
                     4-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.d)
                     5-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.e)
                     6-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.g)
-//            7-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.)
+
 
                 }
 
@@ -306,7 +292,7 @@ val image= listitemView!!.findViewById<ImageView>(com.prianshuprasad.brainsmashe
 //            7-> image.setImageResource(com.prianshuprasad.brainsmasher.R.drawable.)
 
             }
-return  listitemView
+            return  listitemView
         }
 
 
@@ -362,15 +348,9 @@ return  listitemView
             },1500)
 
 
-
-
-
         return listitemView
 
     }
-
-
-
 
 
 

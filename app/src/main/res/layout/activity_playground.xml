@@ -21,19 +21,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="Time: 00:00"
-        app:layout_constraintRight_toRightOf="parent"
+
         android:textColor="@color/white"
         android:layout_marginTop="10dp"
 
         />
     <TextView
         android:id="@+id/HighScore"
-        android:visibility="gone"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="Global High Score: 00"
+        android:text="Global Minimum Time: 00"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"
 
@@ -63,8 +63,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
          app:layout_constraintTop_toTopOf="parent"
-         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/gridView"
         android:text="Observe"
         android:textStyle="bold"
@@ -110,6 +110,7 @@
 
 
             />
+
 
     </LinearLayout>
 
